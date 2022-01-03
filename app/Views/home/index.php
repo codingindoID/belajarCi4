@@ -27,7 +27,7 @@
                         <tr>
                             <td class="text-center text-bold"><?= $no++ ?></td>
                             <td><?= $b->nama ?></td>
-                            <td><?= $b->type ?></td>
+                            <td><?= $b->kategori ?></td>
                             <td class="text-right"><?= $b->qty ?></td>
                             <td width="10%" class="text-center">
                                 <div class="btn-group" role="group" aria-label="Basic example">

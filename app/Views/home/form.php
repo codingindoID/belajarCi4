@@ -9,7 +9,10 @@
         </div>
         <div class="col-md-6">
             <label for="">Kategori Produk</label>
-            <input name="type" type="text" class="form-control upper" placeholder="Kategori Produk">
+            <select name="kategori" class="form-control">
+                <option value="">--PILIH--</option>
+            </select>
+            <!-- <input name="type" type="text" class="form-control upper" placeholder="Kategori Produk"> -->
         </div>
     </div>
     <div class="row mb-3">

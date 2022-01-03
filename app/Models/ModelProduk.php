@@ -9,11 +9,10 @@ class ModelProduk extends Model
 {
     public function getProduct($id = false)
     {
-        $builder = $this->db->table('barang');
         if ($id === false) {
-            return $builder->get()->getResult();
+            return $this->db->table('barang')->get()->getResult();
         } else {
-            return $builder->getWhere(['id' => $id]);
+            return $this->db->table('barang')->getWhere(['id' => $id]);
         }
     }
 
@@ -27,35 +26,29 @@ class ModelProduk extends Model
             $cek =  $this->db->table('barang')->insert($data);
         }
         if ($cek) {
-            $res = [
+            return [
                 'kode'      => 'success',
                 'msg'       => 'berhasil'
             ];
-        } else {
-            $res = [
-                'kode'      => 'error',
-                'msg'       => 'gagal'
-            ];
         }
-        return $res;
+        return [
+            'kode'      => 'error',
+            'msg'       => 'gagal'
+        ];
     }
 
     function hapusBarang($id)
     {
-        $builder = $this->db->table('barang');
-        $builder->where('id', $id);
-        $cek =  $builder->delete();
+        $cek = $this->db->table('barang')->where('id', $id)->delete();
         if ($cek) {
-            $res = [
+            return [
                 'kode'      => 'success',
                 'msg'       => 'Data Berhasil Dihapus'
             ];
-        } else {
-            $res = [
-                'kode'      => 'error',
-                'msg'       => 'Gagal Hapus Data'
-            ];
         }
-        return $res;
+        return [
+            'kode'      => 'error',
+            'msg'       => 'Gagal Hapus Data'
+        ];
     }
 }

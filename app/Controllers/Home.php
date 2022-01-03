@@ -13,7 +13,6 @@ class Home extends BaseController
 
     public function index()
     {
-        // $model = new ModelProduk();
         $data = [
             'title'     => 'Home',
             'barang'    => $this->model->getProduct()
@@ -31,7 +30,6 @@ class Home extends BaseController
 
     function simpanData()
     {
-        // $model = new ModelProduk();
         $id  = $this->request->getPost('id-barang');
         $data = [
             'nama'      => strtoupper($this->request->getVar('nama')),
@@ -46,14 +44,12 @@ class Home extends BaseController
 
     function getDataBarang($id)
     {
-        // $model  = new ModelProduk();
         $data   = $this->model->getProduct($id)->getRow();
         echo json_encode($data);
     }
 
     function hapusBarang($id)
     {
-        // $model  = new ModelProduk();
         $cek   = $this->model->hapusBarang($id);
         return redirect()->to('home')->with($cek['kode'], $cek['msg']);
     }

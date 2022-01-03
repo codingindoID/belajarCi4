@@ -14,7 +14,7 @@ function editFormBarang(id) {
         dataType: "json",
         success: function (response) {
             $('input[name="nama"]').val(response.nama)
-            $('input[name="type"]').val(response.type)
+            $('select[name="kategori"]').val(response.katgori).change()
             $('input[name="qty"]').val(response.qty)
             $('input[name="harga"]').val(response.harga)
             $('#modal-edit').modal('show')
