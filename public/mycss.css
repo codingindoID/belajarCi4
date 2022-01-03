@@ -1,0 +1,57 @@
+label {
+    font-weight: bold !important;
+}
+
+.upper {
+    text-transform: uppercase !important;
+}
+
+.custom-table>thead>tr>th {
+    background-color: mediumslateblue !important;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+.custom-table>tbody>tr>td {
+    padding: 5px;
+}
+
+/* navbar */
+.navbar {
+    background-color: slateblue !important;
+}
+
+.navbar>.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white
+}
+
+/* BACKGROUND */
+.bg-purple {
+    background-color: mediumslateblue !important;
+    color: white;
+}
+
+.btn-purple {
+    background-color: mediumslateblue !important;
+    color: white;
+}
+
+.btn-orange {
+    background-color: sandybrown !important;
+    color: white;
+}
